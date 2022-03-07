@@ -1,0 +1,14 @@
+version: '3.1'
+volumes:
+  data: {}
+services:
+  mariadb:
+    image: debian:buster
+    restart: always
+    expose:
+      - 3306
+    networks:
+      - intra
+    tty: true
+  nginx:
+    image: debian:buster
